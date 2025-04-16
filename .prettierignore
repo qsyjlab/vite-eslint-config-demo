@@ -1,0 +1,19 @@
+/dist/*
+.local
+.output.js
+/node_modules/**
+
+
+
+**/*.svg
+**/*.sh
+
+
+/public/*
+*-lock.*
+pnpm-lock.yaml
+.output
+
+
+# 忽略
+docs/.vitepress
