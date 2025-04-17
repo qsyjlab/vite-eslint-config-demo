@@ -8,7 +8,7 @@ import pluginPrettier from 'eslint-plugin-prettier/recommended'
 /** @type {import('eslint').Linter.Config} */
 export default defineConfig([
   {
-    files: ['src/**/*.{ts,js,mjs,cjs,vue}'],
+    files: ['**/*.{ts,js,mjs,cjs,vue}'],
     languageOptions: {
       globals: {
         ...globals.browser,
@@ -19,7 +19,7 @@ export default defineConfig([
   js.configs.recommended,
   tseslint.configs.recommended,
   {
-    files: ['src/**/*.vue'],
+    files: ['**/*.vue', '**/*.ts'],
     extends: [pluginVue.configs['flat/recommended']],
     languageOptions: {
       parserOptions: {
@@ -60,9 +60,7 @@ export default defineConfig([
       'space-infix-ops': 'warn',
       // 是否允许使用 require （esm项目不需要）
       '@typescript-eslint/no-var-requires': 0,
-      // 'vue/html-self-closing': 'off',
-
-      // 禁止使用any （不禁止 不可能不是用 any）
+      // 禁止使用any
       '@typescript-eslint/no-explicit-any': ['off'],
       // 是否有空函数体
       '@typescript-eslint/no-empty-function': 'warn',
